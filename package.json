@@ -1,0 +1,39 @@
+{
+  "name": "rwill-carbon",
+  "version": "0.0.0",
+  "description": "npm package that calculates your website carbon emissions with puppeteer and https://websitecarbon.com",
+  "main": "src/index.js",
+  "scripts": {
+    "commit": "npx git-cz",
+    "test": "jest",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcradziwill/websitecarbon-puppeteer.git"
+  },
+  "keywords": [
+    "carbon",
+    "emission",
+    "puppeteer"
+  ],
+  "author": "Marc Radziwill <hallo@marcradziwill.com> (https://marcradziwill.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcradziwill/websitecarbon-puppeteer/issues"
+  },
+  "homepage": "https://github.com/marcradziwill/websitecarbon-puppeteer#readme",
+  "devDependencies": {
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2",
+    "jest": "24.9.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "puppeteer": "2.0.0"
+  }
+}
