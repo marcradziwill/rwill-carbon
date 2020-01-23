@@ -1,12 +1,12 @@
 const puppeteer = require('puppeteer');
 
-const carbon = async () => {
+const carbon = async (websiteUrl) => {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.tracing.start();
     await page.goto('https://www.websitecarbon.com/');
-    await page.type('#wgd-cc-url', 'https://marcradziwill.com');
+    await page.type('#wgd-cc-url', websiteUrl);
     await page.click('#js-new-test-button');
   
     const percentSelector =
@@ -53,7 +53,7 @@ const carbon = async () => {
     // res.status(500).send(error.message);
   }
 }
-carbon()
+carbon('https//marcradziwill.com')
 module.exports = {
   carbon: carbon
 }
